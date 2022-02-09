@@ -68,7 +68,7 @@ int main()
 {
 	int n;
 	int a[101]={0};int i;
-			int sum=0;
+			float sum=0;
 			int cnt[100]={0};
 			float average;
 
@@ -82,33 +82,30 @@ int main()
 		sum=a[i]+sum;
 		if(a[i]>=0&&a[i]<=50)
 		{
-			cnt[1]++;
+			cnt[0]++;
 		}
 		else if(a[i]>=51&&a[i]<=100)
 		{
-			cnt[2]++;
+			cnt[1]++;
 		}
 		else if(a[i]>=101&&a[i]<=150)
 		{
-			cnt[3]++;
+			cnt[2]++;
 		}
 		else if(a[i]>=151&&a[i]<=200)
 		{
-			cnt[4]++;
+			cnt[3]++;
 		}
 		else if(a[i]>=201&&a[i]<=300)
 		{
-			cnt[5]++;
+			cnt[4]++;
 		}
-		else if(a[i]>300)
+		else 
 		{
-			cnt[6]++;
+			cnt[5]++;
 		}
 	}
 	average=sum/n*1.0;
 	printf("%0.2f\n",average);
-	for(i=1;i<7;i++)
-	{
-		printf("%d ",cnt[i]);
-	}
+	printf("%d %d %d %d %d %d",cnt[0],cnt[1],cnt[2],cnt[3],cnt[4],cnt[5]);
 }
