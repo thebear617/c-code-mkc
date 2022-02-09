@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<math.h>
 	/* 和差积商
     int a,b;
 	scanf("%d %d",&a,&b);
@@ -64,7 +64,7 @@ printf("%d %c",a+b,);
 	}
 	printf("%d",cnt);
 }*/
-int main()
+/*int main()
 {
 	int n;
 	int a[101]={0};int i;
@@ -108,4 +108,35 @@ int main()
 	average=sum/n*1.0;
 	printf("%0.2f\n",average);
 	printf("%d %d %d %d %d %d",cnt[0],cnt[1],cnt[2],cnt[3],cnt[4],cnt[5]);
+}*/
+int main()
+{
+	int a,b;double c;
+	int  i,j;
+	int t;
+	int sum=0;
+	int cnt=0;
+	scanf("%d %d",&a,&b);
+	if(a>=b)
+	{
+		t=a;
+		a=b;
+		b=t;
+	}
+	for(i=a;i<=b;i++)
+	{	j=i;
+		sum=0;
+		while(j!=0){
+			
+			c=j%10;
+			sum=sum+pow(c,3.0);
+			j=j/10;
+		}
+		if(sum==i)
+		{
+			cnt++;
+		}
+		
+	}
+	printf("%d",cnt);
 }
